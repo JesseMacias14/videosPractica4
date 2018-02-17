@@ -1,0 +1,90 @@
+
+
+
+body{
+    width: 1000px;
+    height: 900px;
+    background-color: dimgrey;
+
+
+}
+head{
+    float: none;
+}
+
+h1{
+    text-align: center;
+    color: rgb(154, 173, 197);
+    font-style: unset;
+
+}
+#cuerpo{
+    background-color: darkslategrey;
+    width: 80%;
+    margin: 1em auto;
+    overflow: auto;
+    
+    background: rgb(226, 227, 230);
+    color: azure;
+    float: left;
+}
+
+#tabla
+{
+    background-color: darkslategrey;
+    width:40%;
+    margin: 1em auto;
+  
+    background: rgb(37, 41, 53);
+    color: rgb(36, 121, 121);
+    float: right;
+}
+
+header#main{
+    padding: 1em;
+    background: lightgray;
+}
+
+main{
+    padding: 1em;
+}
+
+footer#main{
+    padding: 0.5em;
+    text-align: center;
+}
+
+
+
+nav{
+    background-color: rgb(157, 161, 182);
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    color: rgb(62, 96, 146);
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+}
+
+nav a:hover{
+    /*background-color: gray;*/
+    color: gray;
+}
+
+#playlist{
+    
+    float:right;
+    background-color: aquamarine;
+    width: 80%;
+    margin: 1em auto;
+}
+footer{
+    text-align: center;
+    color: beige;
+}
