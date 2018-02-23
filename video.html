@@ -8,84 +8,43 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <meta name="Author" content="YesicaMacias14" />
                 <meta name="Description" content="Sample for HTML5" />
-                <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+               
                 
         
                 <link rel="stylesheet" type="text/css" media="screen" href="css/formato.css" />
-                <script src="js/main.js"></script>
-                <script>
+                
+               
+               
+               
+               
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+               
+              
 
-function start(e) {
-    e.dataTransfer.effecAllowed = 'move'; // Define el efecto como mover
-    e.dataTransfer.setData("Data", e.target.id); // Coje el elemento que se va a mover
-    e.dataTransfer.setDragImage(e.target, 0, 0); // Define la imagen que se vera al ser arrastrado el elemento y por donde se coje el elemento que se va a mover (el raton aparece en la esquina sup_izq con 0,0)
-    e.target.style.opacity = '0.4'; // Establece la opacidad del elemento que se va arrastrar
-}
-
-function end(e) {
-    e.target.style.opacity = ''; // Restaura la opacidad del elemento   
-    e.dataTransfer.clearData("Data");
-}
-function over(event)
-{
-    var elemArrastrable = e.dataTransfer.getData("video"); //video que se esta arrastrando
-    var id= e.target.id; //elemento sobre el que se esta arrastrando
-
-    //poder soltar el elemento en el div de cuerpo
-    if(id=='cuerpo')
-    {
-        return false; 
-    }
-}
-
-function drop(e)
-{
-    var elemArrastrado= e.dataTransfer.getData("video");//elemento que se esta arrastrando
-    e.target.appendChild(document.getElementById(elementoArrastrado)); //añade el video que se arrastro
-
-    //dimensiones del elemento sobre el que se agrego
-    xAux= $('#'+e.target.id).width();
-    yAux=$('#'+e.target.id).height();
-
-    //dimensiones del elemento arrastrado
-    xelemto= $('#'+e.elemArrastrado).width();
-    yelemto=$('#'+e.elemArrastrado).height();
-
-    // Posicion del elemento sobre el que se arrastra
-    posXCont = $(e.target).position().left;
-    posYCont = $(e.target).position().top;
-
-    // Posicion absoluta del raton
-    x = e.layerX;
-    y = e.layerY;
-
-}
-function clonar(e)
-{
-    var elementoArrastrado = document.getElementById(e.dataTransfer.getData("Data")); // Elemento arrastrado
-
-    elementoArrastrado.style.opacity = ''; // Dejamos la opacidad a su estado anterior para copiar el elemento igual que era antes
-
-    var movecarclone = elementoArrastrado.cloneNode(true); // Se clona el elemento
-    movecarclone.id = "ElemClonado" + contador; // Se cambia el id porque tiene que ser unico
-    contador += 1;
-    elementoClonado.style.position = "static"; // Se posiciona de forma "normal" (Sino habria que cambiar las coordenadas de la posición) 
-    e.target.appendChild(movecarclone); // Se añade el elemento clonado
-}
-
-function leave(e) {
-    e.target.style.border = ''; 
-}
-                </script>
         
         </head>
         <body>
             <header>
                 <h1>LA SEÑORA NESBIT</h1>
             </header>
+            <form>
+                <label for="inputEmail" class="sr-only">Correo:&nbsp;</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="correo" required autofocus>
+                <label for="inputPassword" class="sr-only">Pass:&nbsp;</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="pass" required>
+                <div class="checkbox mb-3">
+                  <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                  </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block login-boton" type="submit">Sign in</button>
+            </form>
             <nav>
                     <ul>
-                        <li><a href="#">AGREGAR</a></li>
+                        <li><a href="login.html">AGREGAR</a></li>
                         <li><a href="#">QUITAR</a></li>
                     </ul>
                 </nav>
@@ -120,4 +79,7 @@ function leave(e) {
           </figure>
                       
         </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/drag.js"></script>
 </html>
