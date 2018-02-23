@@ -20,7 +20,11 @@ body { background: #222; }
   top: 0;
 }
 #video_player figcaption { width: 25%; }
-#video_player figcaption a { display: block; }
+#video_player figcaption a { display: block;
+ }
+
+
+ 
 #video_player figcaption a { 
   opacity: .5;
   transition: 1s opacity; 
@@ -75,4 +79,15 @@ nav a:hover{
     background: rgb(226, 227, 230);
     color: azure;
     float: left;
+}
+
+label,input,button{
+  float: left;
+  color: rgb(10, 37, 41);
+
+}
+
+#botones
+{
+  float: right;
 }
